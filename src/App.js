@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Card } from "./components/Card.jsx";
+import { useState } from "react";
+import data from "./tariffs.json";
 
 function App() {
+  const [selectedCard, setSelectedCard] = useState(3);
+
+  const handleSelectCard = (selectedItem) => {
+    if (selectedCard === selectedItem) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(selectedItem);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="card-container">
+      {data.map((item) => (
+        <Card
+          key={item.id}
+          item={item}
+          isSelected={selectedCard === item}
+          onSelect={handleSelectCard}
+        />
+      ))}
     </div>
   );
 }
-
 export default App;
