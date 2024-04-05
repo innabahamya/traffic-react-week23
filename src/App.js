@@ -9,7 +9,7 @@ function App() {
     if (selectedCard === selectedItem) {
       setSelectedCard(null);
     } else {
-      setSelectedCard(selectedItem);
+      setSelectedCard(selectedItem.id);
     }
   };
 
@@ -19,7 +19,7 @@ function App() {
         <Card
           key={item.id}
           item={item}
-          isSelected={selectedCard === item}
+          isSelected={selectedCard === item.id}
           onSelect={handleSelectCard}
         />
       ))}

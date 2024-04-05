@@ -1,21 +1,3 @@
-// import './card.css';
-
-// const Card = ({ name, currency, price, interval, traffic, content }) => (
-//     <div className="card">
-//       <h3 className='darkTurquoise darkGreen darkRed darkBlue'>{name}</h3>
-//       <div className="card-price darkTurquoise darkGreen darkRed darkBlue">
-//       <p className='currency'>{currency}</p>
-//       <p className='price'>{price}</p>
-//       <p className='interval'>{interval}</p>
-//       </div>
-//       <p>{traffic}</p>
-//       <p>{content}</p>
-//     </div>
-//   );
-
-//   export default Card
-
-
 import "./card.css";
 
 function Card(props) {
@@ -29,8 +11,9 @@ function Card(props) {
         <div
             className={`card ${isSelected ? "card_selected" : ""}`}
             theme={item.theme}
-            onClick={handleCardClick}
+            onClick={() => handleCardClick(item.id)}
         >
+  
             <div className="card__title">{item.name}</div>
             <div className="card__price">
                 <span className="price-span">{item.price}</span> руб. /мес
