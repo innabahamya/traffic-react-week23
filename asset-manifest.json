@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/traffic-react-week23/static/css/main.5b8ffaa6.css",
+    "main.js": "/traffic-react-week23/static/js/main.44008a1d.js",
+    "static/js/453.95b0b151.chunk.js": "/traffic-react-week23/static/js/453.95b0b151.chunk.js",
+    "index.html": "/traffic-react-week23/index.html",
+    "main.5b8ffaa6.css.map": "/traffic-react-week23/static/css/main.5b8ffaa6.css.map",
+    "main.44008a1d.js.map": "/traffic-react-week23/static/js/main.44008a1d.js.map",
+    "453.95b0b151.chunk.js.map": "/traffic-react-week23/static/js/453.95b0b151.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b8ffaa6.css",
+    "static/js/main.44008a1d.js"
+  ]
+}
